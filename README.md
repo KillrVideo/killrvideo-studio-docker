@@ -4,7 +4,7 @@
 
 [DataStax Studio][studio] running in a Docker container. Contains Studio notebooks to 
 demonstrate how to interact with data for the [KillrVideo][killrvideo] app, including sample
-CQL and Gremlin queries. Based on this [Studio image][studio-docker].
+CQL and Gremlin queries. Based on this [DataStax Studio image][studio-docker].
 
 ## Builds and Releases
 
