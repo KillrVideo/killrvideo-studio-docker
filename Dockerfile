@@ -1,11 +1,10 @@
-FROM luketillman/datastax-studio:2.0.0
+FROM datastax/dse-studio:2.0.0
 
 # Delete previous contents of examples dir (if desired)
-# RUN rm -rf /opt/studio/examples/*
+# RUN rm -rf ${STUDIO_HOME}/examples/*
 
-# Copy example notebook and connection data files into /opt/studio/examples
-# When studio starts, it examines the contents of /opt/studio/examples and loads the content 
-# into its active data store (i.e. /opt/studio/userdata) 
-COPY [ "examples/", "/opt/studio/examples/"]
-RUN chown -R studio:studio /opt/studio/examples
-RUN chmod -R 777 /opt/studio/examples
+# Copy example notebook and connection data files into the Studio examples directory
+# When studio starts, it examines the contents of the directory and loads the content 
+# into its active data store (e.g. /opt/datastax-studio/userdata) 
+COPY [ "examples/", "${STUDIO_HOME}/examples/"]
+RUN chmod -R 777 ${STUDIO_HOME}/examples
