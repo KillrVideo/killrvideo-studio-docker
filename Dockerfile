@@ -1,4 +1,4 @@
-FROM datastax/dse-studio:2.0.0
+FROM datastax/dse-studio:6.0.0
 
 # Delete previous contents of examples dir (if desired)
 # RUN rm -rf ${STUDIO_HOME}/examples/*
